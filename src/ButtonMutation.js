@@ -22,7 +22,10 @@ export default class ButtonMutation extends React.Component {
 
   buttonHandle() {
       Relay.Store.commitUpdate(
-        new LikeStoryMutation({LoginEmail: ""}), {onSuccess: this.onSuccess});
+        new LikeStoryMutation({
+          clientMutationId: "abc",
+          email: "isaac@gmail.com",
+          password: "boratino"}), {onSuccess: this.onSuccess});
     }
 
     render() {

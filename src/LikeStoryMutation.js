@@ -51,18 +51,18 @@ export default class LikeStoryMutation extends Relay.Mutation<Props> {
 
     getVariables() {
       return {
-          clientMutationId: "abc",
-          email: "isaac@gmail.com",
-          password: "boratino"      
+          clientMutationId: this.props.clientMutationId,
+          email: this.props.email,
+          password: this.props.password      
       };
     }                       
 
     getOptimisticResponse() {
       return {
         input:{
-          clientMutationId: "abc",
-          email: "isaac@gmail.com",
-          password: "boratino"
+          clientMutationId: this.props.clientMutationId,
+          email: this.props.email,
+          password: this.props.password 
         }        
       };
     }
